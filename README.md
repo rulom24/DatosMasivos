@@ -7,7 +7,7 @@ Departamento de Sistemas y Computación
 Semestre: Febrero - Julio 2021
 
 Materia:
-Mineria de Datos
+Datos Masivos
 
 Profesor: 
 Jose Christian Romero Hernandez
