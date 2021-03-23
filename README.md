@@ -23,7 +23,7 @@ Alumnos:
 
 ### Unidad-1
 
-1. [https://github.com/rulom24/DatosMasivos/blob/Unit-1/Practice/Practice%201.scala](#id1)
+1. [Practice 1](#id1)
 2. [Practice 2](#id2)
 3. [Practice 3](#id3)
 
