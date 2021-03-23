@@ -1,19 +1,14 @@
-// Assessment 1/Practica 1
-//1. Desarrollar un algoritmo en scala que calcule el radio de un circulo
+// Assessment 1/Practice-1
+//1. Develop a scala algorithm that calculates the radius of a circle.
 
+//2. Develop a scala algorithm that tells me if a number is prime.
 
-//2. Desarrollar un algoritmo en scala que me diga si un numero es primo
+//3. Given the variable bird = "tweet", use string interpolation to
+//print "I'm writing a tweet".
 
+//4. Given the variable message = "Hello Luke, I am your father!" uses slilce to extract the
+// "Luke" sequence.
 
-//3. Dada la variable bird = "tweet", utiliza interpolacion de string para
-//   imprimir "Estoy ecribiendo un tweet"
+//5. What is the difference between value and a variable in scala?
 
-
-//4. Dada la variable mensaje = "Hola Luke yo soy tu padre!" utiliza slilce para extraer la
-//   secuencia "Luke"
-
-
-//5. Cual es la diferencia entre value y una variable en scala?
-
-
-//6. Dada la tupla (2,4,5,1,2,3,3.1416,23) regresa el numero 3.1416 
+//6. Given the tuple (2,4,5,1,2,3,3.1416,23) returns the number 3.1416.
