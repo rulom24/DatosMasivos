@@ -12,7 +12,7 @@ Datos Masivos
 Profesor: 
 Jose Christian Romero Hernandez
 
-Alumno: 
+Alumnos: 
 16210502 Aceves Zamora Juan Antonio
 13211397 Briseño Cota Raúl Omar
 
