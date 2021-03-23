@@ -14,6 +14,7 @@ Jose Christian Romero Hernandez
 
 Alumnos: 
 16210502 Aceves Zamora Juan Antonio
+
 13211397 Briseño Cota Raúl Omar
 
 
