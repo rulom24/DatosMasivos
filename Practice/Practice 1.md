@@ -20,4 +20,4 @@ The variable (val) is immutable once the value is assigned, it cannot be changed
 The variable (var) once assigned can reassign the value, as long as the new value is of the same type.
 
 6. Given the tuple (2,4,5,1,2,3,3.1416,23) returns the number 3.1416.
-![five image]()
+![five image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2021-33-11.png)
