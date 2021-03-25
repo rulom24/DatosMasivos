@@ -16,7 +16,7 @@
 
 6. Create a mutable map named names that contains the following:
    "Jose", 20, "Luis", 24, "Ana", 23, "Susana", "27".
-![six image]()   
+![six image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2023-06-40.png)   
    
 6a. Print all the keys on the map.
 ![seven image]()
