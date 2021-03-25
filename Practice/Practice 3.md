@@ -35,3 +35,25 @@ println(fib(n))
 Algorithm-2 Version with explicit formula.
 
 This algorithm uses the explicit formula for the fibonacci series, this formula is not as accurate as when using the conventional methods like cycles or recursion.
+
+val n = 10
+
+var phi=((1+math.sqrt(5))/2)
+
+var j=((math.pow(phi,n)-math.pow((1-phi),n))/(math.sqrt(5)))
+
+def fib(n:Double) : Double ={
+
+if (n<2){
+
+return n
+           }
+           
+else {
+
+ 	return j
+  
+        }
+}
+
+println(fib(n))
