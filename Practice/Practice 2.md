@@ -3,7 +3,7 @@
 ![first image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2022-50-35.png)
 
 2. Bring the items from "list" "green", "yellow", "blue".
-![]()
+![Second image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2022-54-19.png)
 
 3. Create an array of numbers in the range 1-1000 in steps of 5 by 5.
 ![]()
