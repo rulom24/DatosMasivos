@@ -11,6 +11,7 @@ print "I'm writing a tweet".
 
 4. Given the variable message = "Hello Luke, I am your father!" uses slilce to extract the
 "Luke" sequence.
+![four image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2021-29-18.png)
 
 5. What is the difference between value and a variable in scala?
 
