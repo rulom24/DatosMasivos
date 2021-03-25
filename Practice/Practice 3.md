@@ -2,7 +2,7 @@
 
 #### Fibonacci algorithms
 
-Fibonacci Recursive Version
+Algorithm-1 Fibonacci Recursive Version
 
 
 We define the value of "n" with value 20, we create the function fib with a condition, if "n" is not less than 2 it returns the value n, but it returns the function fib. 
@@ -31,3 +31,7 @@ def fib(n:Int): = Int {
 }
 
 println(fib(n))
+
+Algorithm-2 Version with explicit formula.
+
+This algorithm uses the explicit formula for the fibonacci series, this formula is not as accurate as when using the conventional methods like cycles or recursion.
