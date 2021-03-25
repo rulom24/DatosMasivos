@@ -1,5 +1,5 @@
-// Assessment 1/Practice-1
-//1. Develop a scala algorithm that calculates the radius of a circle.
+### Assessment 1/Practice-1
+1. Develop a scala algorithm that calculates the radius of a circle.
 ![one image]()
 
 //2. Develop a scala algorithm that tells me if a number is prime.
