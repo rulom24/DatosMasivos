@@ -3,6 +3,7 @@
 ![one image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2020-05-49.png)
 
 2. Develop a scala algorithm that tells me if a number is prime.
+![two image]()
 
 3. Given the variable bird = "tweet", use string interpolation to
 print "I'm writing a tweet".
