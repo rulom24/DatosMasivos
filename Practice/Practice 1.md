@@ -14,9 +14,9 @@ print "I'm writing a tweet".
 ![four image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2021-29-18.png)
 
 5. What is the difference between value and a variable in scala?
+The variable (val) is immutable once the value is assigned, it cannot be changed.
 
-La variable (val) es inmutable una vez asignado el valor, no se puede cambiar.
-La variable (var) una vez asignada puede reasignar el valor, siempre que el nuevo valor sea del mismo tipo.
+The variable (var) once assigned can reassign the value, as long as the new value is of the same type.
 
 6. Given the tuple (2,4,5,1,2,3,3.1416,23) returns the number 3.1416.
 ![five image]()
