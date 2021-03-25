@@ -9,7 +9,7 @@
 ![Three image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2022-54-19.png)
 
 4. Create an array of numbers in the range 1-1000 in steps of 5 by 5.
-![]()
+![Four image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2022-58-17.png)
 
 5. What are the unique elements of the list List (1,3,3,4,6,7,3,7) use conversion to sets?
 ![]()
