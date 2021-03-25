@@ -87,5 +87,32 @@ def fib(num:Int):Int={
 }
 
 fib(10)
+
 fib(20)
+
 fib(30)
+
+
+Algorithm-4 Iterative version 2 variables.
+
+We create a function that will receive and return an Int, we define the variables n, a and b. We create a for loop, the loop will do 2 things: first add (b + a) to variable b and then subtract (b - a) and that will be assigned to variable a. Finally it will return the result.
+
+def fib(n:Int):Int={
+
+var n : Int = 35
+
+var a = 0
+
+var b = 1
+
+for (k <- 1 to n){
+
+ 	b = b + a
+	
+ 	a = b - a
+   }
+   
+   return a
+}
+
+println(fib(n))
