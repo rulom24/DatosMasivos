@@ -14,6 +14,7 @@ print "I'm writing a tweet".
 ![four image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2021-29-18.png)
 
 5. What is the difference between value and a variable in scala?
+
 The variable (val) is immutable once the value is assigned, it cannot be changed.
 
 The variable (var) once assigned can reassign the value, as long as the new value is of the same type.
