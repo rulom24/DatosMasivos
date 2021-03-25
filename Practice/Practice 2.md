@@ -22,4 +22,4 @@
 ![seven image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2023-06-54.png)
 
 6b. Add the following value to the map ("Miguel", 23).
-![eigth image]()
+![eigth image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2023-07-20.png)
