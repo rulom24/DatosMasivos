@@ -1,6 +1,6 @@
 ### Practice-2
 1. Create a list called "list" with the elements "red", "white", "black".
-![]()
+![first image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2022-50-35.png)
 
 2. Bring the items from "list" "green", "yellow", "blue".
 ![]()
