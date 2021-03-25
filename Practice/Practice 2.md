@@ -18,8 +18,8 @@
    "Jose", 20, "Luis", 24, "Ana", 23, "Susana", "27".
 ![]()   
    
-6 a . Print all the keys on the map.
+6a. Print all the keys on the map.
 ![]()
 
-6 b . Add the following value to the map ("Miguel", 23).
+6b. Add the following value to the map ("Miguel", 23).
 ![]()
