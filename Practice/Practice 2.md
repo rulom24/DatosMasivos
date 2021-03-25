@@ -12,7 +12,7 @@
 ![Four image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2022-58-17.png)
 
 5. What are the unique elements of the list List (1,3,3,4,6,7,3,7) use conversion to sets?
-![Five image]()
+![Five image](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Captura%20de%20pantalla%20de%202021-03-22%2023-00-58.png)
 
 6. Create a mutable map named names that contains the following:
    "Jose", 20, "Luis", 24, "Ana", 23, "Susana", "27".
