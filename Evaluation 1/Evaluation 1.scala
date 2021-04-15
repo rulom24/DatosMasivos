@@ -25,6 +25,9 @@ NetDF.describe()
 // of the "High" column in front of the "Volume" column of shares traded for one day.
 // Added the new column "HV Ratio" which will have the result of the division of "High" by "Volume".
 
+//8.What day had the highest peak in the "close" column?
+// Answer: There is no such column in the data frame.
+
 val NetDF2 = df.withColumn("HV Ratio",df("High")/df("Volume"))
 df2.show()
 
