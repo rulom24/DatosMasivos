@@ -19,7 +19,7 @@ NetDF.printSchema()
 NetDF.head(5)
 
 //6. Use describe()
-NetDF.describe()
+NetDF.describe().show()
 
 //7.  Create a new column called "HV Ratio" which is the relationship between the price
 // of the "High" column in front of the "Volume" column of shares traded for one day.
