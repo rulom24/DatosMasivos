@@ -35,34 +35,33 @@ NetDF2.show()
 NetDF.select(max("Volume")).show()
 NetDF.select(min("Volume")).show()
 
-//11. Con sintaxis Scala/Spark $ conteste los siguientes: 
-
-//a) ¿Cuantos dias fue la columna "Close" inferior a $600?
-df.filter($"Close"<600).count()
+//11.With Scala / Spark $ syntax answer the following:
+//a) How many days was the "Close" column less than $ 600?
+NetDF.filter($"Close"<600).count()
  
 
-// b) ¿Que porcentaje del tiempo fue la columna "High" mayor que $500?
-(df.filter($"High" > 500).count() * 1.0/ df.count())*100
+// b)What percentage of the time was the "High" column greater than $ 500?
+(NetDF.filter($"High" > 500).count() * 1.0/ df.count())*100
 
-// c) ¿Cual es la correlacion de Pearson entre Columna "High" y la columna "Volume"?
-df.select(corr("High","Volume")).show()
+// c) What is the Pearson correlation between Column "High" and column "Volume"?
+NetDF.select(corr("High","Volume")).show()
 
-// Se importa la sintaxis de SPARK para la consulta de datos 
+// The SPARK syntax for the data query is imported.
 import spark.implicits._
 
-// d) ¿Cual es el maximo de la columna "High" por año?
-// Se agrego la columna "Year" del dato "Date", en la variable "yeardf"
-val yeardf = df.withColumn("Year",year(df("Date")))
-// Se selecciono a partir de la variable "yeardf" el año y el maximo de "High", a partir de maximos a minimo en los años
+// d) What is the maximum in the "High" column per year?
+// The column "Year" of the data "Date" was added, in the variable "yeardf"
+val yeardf = NetDF.withColumn("Year",year(NetDF("Date")))
+// The year and the maximum of "High" were selected from the variable "yeardf", from the maximum to the minimum in the years.
 val yearmaxs = yeardf.select($"Year",$"High").groupBy("Year").max()
-// Se dio como resultado el maximo de la columna "High" por año
+// The maximum of the column "High" per year was returned.
 val res = yearmaxs.select($"Year",$"max(High)")
 res.orderBy("Year").show()
 
-// e) ¿Cual es el promedio de la columna "Close" para cada mes del calendario?
-// Se agrego la columna "Month" del dato "Date", en la variable "monthdf"
-val monthdf = df.withColumn("Month",month(df("Date")))
-// Se selecciono a partir de la variable "monthdf" el mes y el promedio de "Close"
+// e) What is the average of the "Close" column for each calendar month?
+// The column "Month" of the data "Date" was added, in the variable "monthdf".
+val monthdf = NetDF.withColumn("Month",month(NetDF("Date")))
+// The month and the average of "Close" were selected from the variable "monthdf".
 val monthavgs = monthdf.select($"Month",$"Close").groupBy("Month").mean()
-// Se selecciono y mostro el promedio de la columna "Close" para cada mes del calendario
+// The average of the "Close" column for each calendar month was selected and displayed.
 monthavgs.select($"Month",$"avg(Close)").orderBy("Month").show()
