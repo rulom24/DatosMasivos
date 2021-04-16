@@ -1,6 +1,7 @@
 //1. Sign in to Spark.
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
+import spark.implicits._
 val spark = SparkSession.builder().getOrCreate()
 
 //2.Load Netflix Stock CSV.
@@ -14,7 +15,7 @@ ColNames.foreach(name => println(s"$name"))
 NetDF.printSchema()
 
 //5. Print the first 5 columns.
-NetDF.head(5)
+NetDF.columns.take(5)
 
 //6. Use describe()
 NetDF.describe().show()
@@ -26,14 +27,13 @@ val NetDF2 = NetDF.withColumn("HV Ratio",NetDF("High")/NetDF("Volume"))
 NetDF2.show()
 
 //8.What day had the highest peak in the "close" column?
-// Answer: There is no such column in the data frame.
+NetDF.groupBy(dayofweek(NetDF("Date")).alias("Day")).max("Close").sort(asc("Day")).show()
 
 //9. What is the meaning of the Close column "Close"?
 // Answer: It is the end of the month.
 
 //10. What is the maximum and minimum of the column "Volume"?
-NetDF.select(max("Volume")).show()
-NetDF.select(min("Volume")).show()
+NetDF.select(max("Volume"), min("Volume")).show()
 
 //11.With Scala / Spark $ syntax answer the following:
 //a) How many days was the "Close" column less than $ 600?
@@ -41,13 +41,11 @@ NetDF.filter($"Close"<600).count()
  
 
 // b)What percentage of the time was the "High" column greater than $ 500?
-(NetDF.filter($"High" > 500).count() * 1.0/ df.count())*100
+(NetDF.filter($"High" > 500).count() * 1.0/ NetDF.count())*100
 
 // c) What is the Pearson correlation between Column "High" and column "Volume"?
 NetDF.select(corr("High","Volume")).show()
 
-// The SPARK syntax for the data query is imported.
-import spark.implicits._
 
 // d) What is the maximum in the "High" column per year?
 // The column "Year" of the data "Date" was added, in the variable "yeardf"
