@@ -14,7 +14,7 @@ ColNames.foreach(name => println(s"$name"))
 NetDF.printSchema()
 
 //5. Print the first 5 columns.
-NetDF.head(5)
+NetDF.columns.take(5)
 
 //6. Use describe()
 NetDF.describe().show()
