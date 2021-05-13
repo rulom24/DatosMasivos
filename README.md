@@ -1,4 +1,3 @@
-
 ### UNIT-1
 
 1. [Practice 1](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Practice/Practice%201.md)
@@ -11,4 +10,3 @@
 
 ### EVALUATION-1
 [Exam](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Evaluation%201/Evaluation%201.scala)
-
