@@ -7,7 +7,7 @@
 2. [Basic Statistics](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Basic%20Statistics.pdf)
 3. [Decision Tree Classifier](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Decision%20Tree%20Classifier.pdf)
 4. [Random Forest Classifier](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Random%20Forest%20Classifier.pdf)
-5. [Gradient-boosted-tree-classifier]()
+5. [Gradient-boosted-tree-classifier](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Gradient%20Boosted%20Tree%20Classifier.pdf)
 6. []()
 7. []()
 8. []()
