@@ -10,7 +10,7 @@
 5. [Gradient-boosted-tree-classifier](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Gradient%20Boosted%20Tree%20Classifier.pdf)
 6. [Multilayer perceptron classifier](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Multilayer%20Perceptron%20Classifier.pdf)
 7. [Linear Support Vector Machine](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Linear%20Support%20VectorMachine.pdf)
-8. []()
+8. [One-vs-Rest classifier]()
 9. []()
 
 ### EVALUATION-2
