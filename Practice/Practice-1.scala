@@ -5,7 +5,7 @@ import org.apache.spark.ml.stat.Correlation
 //It allows access to a value in a row through generic access by ordinal, as well as primitive access.
 import org.apache.spark.sql.Row
 
-//Crea vectores densos y dispersos  a partir de sus valores, dentro de la matriz 
+//Create dense and sparse vectors from their values, within the matrix.
 val data = Seq(
    (4, Seq((0, 1.0), (3, -2.0))),
   Vectors.dense(4.0, 5.0, 0.0, 3.0),
