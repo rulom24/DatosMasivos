@@ -9,7 +9,7 @@
 4. [Random Forest Classifier](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Random%20Forest%20Classifier.pdf)
 5. [Gradient-boosted-tree-classifier](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Gradient%20Boosted%20Tree%20Classifier.pdf)
 6. [Multilayer perceptron classifier](https://github.com/rulom24/DatosMasivos/blob/Unit-2/Practice/Practica-Multilayer%20Perceptron%20Classifier.pdf)
-7. []()
+7. [Linear Support Vector Machine]()
 8. []()
 9. []()
 
