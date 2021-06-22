@@ -43,8 +43,11 @@ val WSSSE = model.computeCost(features)
 println(s"Within set sum of Squared Errors = $WSSSE")
 ```
 
-![thw image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura2.png)
+![two image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura2.png)
 
 ```{r}
-
+//9.- We evaluate the groups.
+val WSSSE = model.computeCost(features)
+println(s"Within set sum of Squared Errors = $WSSSE")
 ```
+![three image]()
