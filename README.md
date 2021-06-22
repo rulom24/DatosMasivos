@@ -49,4 +49,6 @@ println(s"Within set sum of Squared Errors = $WSSSE")
 //10.- We print the results.
 println("Cluster Centers: ")
 model.clusterCenters.foreach(println)
+```
+
 ![three image]()
