@@ -32,3 +32,5 @@ Alumno:
 ```{r}
 library(ggplot2)
 ```
+
+![one image]()
