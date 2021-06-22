@@ -30,7 +30,9 @@ Alumno:
 
 #### 
 ```{r}
-library(ggplot2)
+//5.- We select the columns with which we are going to work
+val feature_data = dataf.select ("Fresh", "Milk", "Supermarket", "Frozen", "Detergents_Paper", "Delicassen")
+feature_data.show
 ```
 
 ![one image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura1.png)
