@@ -28,7 +28,6 @@ Alumno:
 # Evaluation 3<a name="id1"></a>
 
 
-#### 
 ```{r}
 //5.- We select the columns with which we are going to work
 val feature_data = dataf.select ("Fresh", "Milk", "Supermarket", "Frozen", "Detergents_Paper", "Delicassen")
