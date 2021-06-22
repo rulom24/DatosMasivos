@@ -44,3 +44,7 @@ println(s"Within set sum of Squared Errors = $WSSSE")
 ```
 
 ![thw image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura2.png)
+
+```{r}
+
+```
