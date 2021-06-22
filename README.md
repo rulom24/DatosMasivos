@@ -51,4 +51,4 @@ println("Cluster Centers: ")
 model.clusterCenters.foreach(println)
 ```
 
-![three image]()
+![three image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura3.png)
