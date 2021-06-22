@@ -3,24 +3,23 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.ml.clustering.KMeans
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.mllib.linalg.{Vector, Vectors}
+import org.apache.log4j._
+
+//Minimizar errores
+Logger.getLogger("org").setLevel(Level.ERROR)
 
 //Crear sesión de spark
 val spark = SparkSession.builder.getOrCreate()
 
 //Cargar dataframe
-val dataf = spark.read.option("header",
-"true").option("inferSchema","true")csv("Wholesale_customers_data.
-csv")
+val dataf = spark.read.option("header", "true").option("inferSchema","true")csv("C:/Users/brise/Documents/GitHub/DatosMasivos/Evaluation/Wholesale_customers_data.csv")
 
 //Seleccionamos las columnas con las que vamos a trabajar
-val feature_data = dataf.select("Fresh", "Milk", "Grocery",
-"Frozen", "Detergents_Paper", "Delicassen")
+val feature_data = dataf.select("Fresh", "Milk", "Grocery", "Frozen", "Detergents_Paper", "Delicassen")
 feature_data.show
 
 //Creamos un nuevo objeto para ensamblar vectores
-val assembler = new VectorAssembler().setInputCols(Array("Fresh",
-"Milk", "Grocery", "Frozen", "Detergents_Paper",
-"Delicassen")).setOutputCol("features")
+val assembler = new VectorAssembler().setInputCols(Array("Fresh", "Milk", "Grocery", "Frozen", "Detergents_Paper", "Delicassen")).setOutputCol("features")
 
 //Usamos assembler para transformar feature_data
 val features = assembler.transform(feature_data)
