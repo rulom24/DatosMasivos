@@ -36,3 +36,6 @@ feature_data.show
 ```
 
 ![one image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura1.png)
+
+//9.-
+![thw image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura2.png)
