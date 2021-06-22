@@ -60,7 +60,21 @@ feature_data.show
 
 ![one image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura1.png)
 
+### //6.- We create a new object to assemble vectors.
+```{r}
+val assembler = new VectorAssembler().setInputCols(Array("Fresh", "Milk", "Grocery", "Frozen", "Detergents_Paper", "Delicassen")).setOutputCol("features")
+```
 
+### //7.- We use assembler to transform feature_data.
+```{r}
+val features = assembler.transform(feature_data)
+```
+
+### //8.- We reuse the KMeans model with K = 3.
+```{r}
+val kmeans = new KMeans().setK(3).setSeed(1L)
+val model = kmeans.fit(features)
+```
 
 ### //9.- We evaluate the groups.
 ```{r}
