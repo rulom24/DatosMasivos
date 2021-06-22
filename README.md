@@ -4,16 +4,16 @@
 Subdirección Académica 
 Departamento de Sistemas y Computación 
 
-Semestre: Febrero - Julio 2021
+Semestre: Febrero - Junio 2021
 
 Materia:
-Mineria de Datos
+Datos Masivos
 
 Profesor: 
 Jose Christian Romero Hernandez
 
 Alumno: 
-17210526 Alvarez Yanez Jose Alonso
+16210502 Aceves Zamora Juan Antonio
 13211397 Briseño Cota Raúl Omar
 
 
