@@ -33,4 +33,4 @@ Alumno:
 library(ggplot2)
 ```
 
-![one image]()
+![one image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura1.png)
