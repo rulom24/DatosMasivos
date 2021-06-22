@@ -1,12 +1,94 @@
-### UNIT-1
+<h1>Tecnológico Nacional de México</h1>
+<h5 style="text-align: center;"> Instituto Tecnológico de Tijuana 
 
-1. [Practice 1](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Practice/Practice%201.md)
-2. [Practice 2](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Practice/Practice%202.md)
-3. [Practice 3](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Practice/Practice%203.md)
+Subdirección Académica 
+Departamento de Sistemas y Computación 
 
-### Tasks and Investigations
+Semestre: Febrero - Junio 2021
 
-1. [Investigation of Pair Coding](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Tasks%20and%20Investigations/Investigation_1%20Pair%20Coding.md)
+Materia:
+Datos Masivos
 
-### EVALUATION-1
-[Exam](https://github.com/rulom24/DatosMasivos/blob/Unit-1/Evaluation%201/Evaluation%201.scala)
+Profesor: 
+Jose Christian Romero Hernandez
+
+Alumno: 
+16210502 Aceves Zamora Juan Antonio
+13211397 Briseño Cota Raúl Omar
+
+
+ </h5>
+
+
+### Index
+
+1. [Evaluation 3](#id1)
+
+
+# Evaluation 3<a name="id1"></a>
+
+### //1.- Import libraries.
+```{r}
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.ml.clustering.KMeans
+import org.apache.spark.ml.feature.VectorAssembler
+import org.apache.spark.mllib.linalg.{Vector, Vectors}
+import org.apache.log4j._
+```
+
+### //2.- Minimize errors.
+```{r}
+Logger.getLogger("org").setLevel(Level.ERROR)
+```
+
+### //3.-Create spark session.
+```{r}
+val spark = SparkSession.builder.getOrCreate()
+```
+
+### //4.- Load dataframe.
+```{r}
+val dataf = spark.read.option("header", "true").option("inferSchema","true")csv("C:/Users/brise/Documents/GitHub/DatosMasivos/Evaluation/Wholesale_customers_data.csv")
+```
+
+
+### //5.- We select the columns with which we are going to work
+```{r}
+val feature_data = dataf.select ("Fresh", "Milk", "Supermarket", "Frozen", "Detergents_Paper", "Delicassen")
+feature_data.show
+```
+
+![one image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura1.png)
+
+### //6.- We create a new object to assemble vectors.
+```{r}
+val assembler = new VectorAssembler().setInputCols(Array("Fresh", "Milk", "Grocery", "Frozen", "Detergents_Paper", "Delicassen")).setOutputCol("features")
+```
+
+### //7.- We use assembler to transform feature_data.
+```{r}
+val features = assembler.transform(feature_data)
+```
+
+### //8.- We reuse the KMeans model with K = 3.
+```{r}
+val kmeans = new KMeans().setK(3).setSeed(1L)
+val model = kmeans.fit(features)
+```
+
+### //9.- We evaluate the groups.
+```{r}
+val WSSSE = model.computeCost(features)
+println(s"Within set sum of Squared Errors = $WSSSE")
+```
+
+![two image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura2.png)
+
+
+### //10.- We print the results.
+```{r}
+println("Cluster Centers: ")
+model.clusterCenters.foreach(println)
+```
+
+![three image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura3.png)
