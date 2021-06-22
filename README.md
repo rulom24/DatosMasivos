@@ -46,8 +46,7 @@ println(s"Within set sum of Squared Errors = $WSSSE")
 ![two image](https://github.com/rulom24/DatosMasivos/blob/Unit-3/Evaluation/Captura2.png)
 
 ```{r}
-//9.- We evaluate the groups.
-val WSSSE = model.computeCost(features)
-println(s"Within set sum of Squared Errors = $WSSSE")
-```
+//10.- We print the results.
+println("Cluster Centers: ")
+model.clusterCenters.foreach(println)
 ![three image]()
