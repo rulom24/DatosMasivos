@@ -1,57 +1,53 @@
-// Import libraries
-import org.apache.spark.mllib.classification.{SVMModel, SVMWithSGD}
-import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
-import org.apache.spark.mllib.util.MLUtils
+//Import libraries 
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.types.DateType
-import org.apache.spark.sql.{SparkSession, SQLContext}
-import org.apache.spark.ml.feature.VectorIndexer
+import org.apache.spark.ml.feature.StringIndexer
 import org.apache.spark.ml.feature.VectorAssembler
-import org.apache.spark.ml.Transformer
-import org.apache.spark.ml.classification.LinearSVC
+import org.apache.spark.ml.linalg.Vectors
 import org.apache.spark.ml.classification.LogisticRegression
+import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
+import org.apache.log4j._
 
 //Minimize errors
-import org.apache.log4j._
-Logger.getLogger("org").setLevel(Level.ERROR)
-
-//Create a spark session
 val spark = SparkSession.builder().getOrCreate()
 
-//Load  CSV 
+//Define val on runtime and startTimeMillis
+val runtime = Runtime.getRuntime
+val startTimeMillis = System.currentTimeMillis()
 
-val df = spark.read.option("header","true").option("inferSchema","true").option("delimiter",";").format("csv").load("C:/Users/alons/OneDrive/Escritorio/Universidad/Datos Masivos/2_Big_Data/Project/Logistic Regression/bank-full.csv")
+//The data us loaded into the variable "data" in the format "bank_full.csv"
+val data  = spark.read.option("header","true").option("inferSchema","true").option("delimiter", ";").format("csv").load("C:/Users/brise/Documents/GitHub/DatosMasivos/Project/bank-full.csv")
 
-// Print schema
-df.printSchema()
+//Rename the column ("y", lable)
+val label = new StringIndexer().setInputCol("y").setOutputCol("label")
+val labeltransform = label.fit(data).transform(data)
 
-// Show Dataframe
-df.show()
+//Generate vector with the names of the columns to evaluate
+val assembler = new VectorAssembler().setInputCols (Array ("balance", "day", "duration", "pdays", "previous")).setOutputCol("features")
 
+//Define the assamble object to transform assembler.transform(newDF)
+val data2 = assembler.transform(labeltransform)
 
-// Modify the column of strings to numeric data
-val change1 = df.withColumn("y",when(col("y").equalTo("yes"),1).otherwise(col("y")))
-val change2 = change1.withColumn("y",when(col("y").equalTo("no"),2).otherwise(col("y")))
-val newcolumn = change2.withColumn("y",'y.cast("Int"))
-//Show the new column
-newcolumn.show()
+//Index the labels
+val training = data2.select("features", "label")
 
-//Generate the features table
-val assembler = new VectorAssembler().setInputCols(Array("balance","day","duration","pdays","previous")).setOutputCol("features")
-val fea = assembler.transform(newcolumn)
-//Show the new column
-fea.show()
-//Change the column y to the label column
-val cambio = fea.withColumnRenamed("y", "label")
-val feat = cambio.select("label","features")
-feat.show(1)
-//Logistic Regression algorithm
-val logistic = new LogisticRegression().setMaxIter(10).setRegParam(0.3).setElasticNetParam(0.8)
-//Fit of the model
-val logisticModel = logistic.fit(feat)
-//Impression of coefficients and interception
-println(s"Coefficients: ${logisticModel.coefficients} Intercept: ${logisticModel.intercept}")
-val logisticMult = new LogisticRegression().setMaxIter(10).setRegParam(0.3).setElasticNetParam(0.8).setFamily("multinomial")
-val logisticMultModel = logisticMult.fit(feat)
-println(s"Multinomial coefficients: ${logisticMultModel.coefficientMatrix}")
-println(s"Multinomial intercepts: ${logisticMultModel.interceptVector}")
+//Divide the data, 70%-30%
+val splits = training.randomSplit(Array(0.7, 0.3), seed = 12345)
+
+//Define 70% training and 30% testing
+val train = splits(0)
+val test = splits(1)
+
+//Define the model for Logistic Regression
+val lr = new  LogisticRegression().setMaxIter(10).setRegParam(0.1)
+val model = lr.fit(train)
+val result = model.transform(test)
+
+val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
+
+//Print Accuracy
+println(s"Accuraccy = ${evaluator.evaluate(result)}")
+println(s"Test Error = ${(1.0 - (evaluator.evaluate(result)))}")
+
+//Print RunTime
+val endTimeMillis = System.currentTimeMillis()
+val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
