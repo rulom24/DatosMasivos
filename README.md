@@ -42,11 +42,11 @@ Una máquina de vectores de soporte (SVM) es un algoritmo de aprendizaje supervi
 
 El objetivo del algoritmo SVM es encontrar un hiperplano que en la mejor medida posible separe los puntos de datos de una clase de los de la otra, para separar dos clases de datos hay muchos hiperplanos posibles. El objetivo del algoritmo es encontrar el que esté a mayor distancia entre los datos de ambas clases.
 
-(Imagen)
+![one image](https://github.com/rulom24/DatosMasivos/blob/Project/Project/Imagen/SVM1.PNG)
 
 Para obtener el plano más alejado de los dos conjuntos de clases se tiene que calcular la distancia perpendicular de cada observación a un determinado hiperplano. La menor de estas distancias (conocida como margen) determina como de alejado está el hiperplano de las observaciones de entrenamiento.
 
-(Imagen)
+![two image](https://github.com/rulom24/DatosMasivos/blob/Project/Project/Imagen/SVM2.PNG)
 
 Los puntos que se encuentran en las fronteras de los márgenes son conocidos como vectores de soporte, SVM busca maximizar el margen entre los puntos y el hiperplano.
 
@@ -68,7 +68,7 @@ Los árboles de decisión son un método de aprendizaje supervisado no paramétr
 
 En el ejemplo siguiente, los árboles de decisión aprenden de los datos para aproximar una curva sinusoidal con un conjunto de reglas de decisión si-entonces-si no. Cuanto más profundo es el árbol, más complejas son las reglas de decisión y más ajustado es el modelo.
 
-(Imagen)
+![three image](https://github.com/rulom24/DatosMasivos/blob/Project/Project/Imagen/DT1.PNG)
 
 Los tipos de árboles de decisión se basan en el tipo de variable objetivo que tenemos. Puede ser de dos tipos:
 1. Árbol de decisión de variable categórica: árbol de  decisión que tiene una variable objetivo categórica y luego se llama  árbol de decisión de variable categórica.
@@ -96,7 +96,7 @@ Sin embargo, la regresión logística es una técnica clásica de modelado predi
 
 Otra ventaja de la regresión logística es que calcula una puntuación de probabilidad de predicción de un evento. Más sobre eso cuando empieces a construir los modelos.
 
-(Imagen)
+![four image](https://github.com/rulom24/DatosMasivos/blob/Project/Project/Imagen/LR1.PNG)
 
 Comparando con la regresión lineal, cuando la variable de respuesta tiene solo 2 valores posibles, es deseable tener un modelo que prediga el valor como 0 o 1 o como una puntuación de probabilidad que oscile entre 0 y 1.
 
@@ -112,7 +112,7 @@ MultiLayer Perceptron (MLP) rompe esta restricción y clasifica conjuntos de dat
 
 El Perceptrón consta de una capa de entrada y una capa de salida que están completamente conectadas. Los MLP tienen las mismas capas de entrada y salida, pero pueden tener múltiples capas ocultas entre las capas mencionadas anteriormente, como se ve a continuación.
 
-(Imagen)
+![five image](https://github.com/rulom24/DatosMasivos/blob/Project/Project/Imagen/MP1.PNG)
 
 - La capa de entrada consta de neuronas que aceptan los valores de entrada. La salida de estas neuronas es la misma que la de los predictores de entrada. Los nodos de la capa de entrada representan los datos de entrada. Todos los demás nodos asignan entradas a salidas mediante una combinación lineal de las entradas con los pesos de los nodos w y el sesgo aplicando una función de activación. Esto se puede escribir en forma de matriz para MLPC con capas K + 1 de la siguiente manera: Input_Layer
 - Las capas ocultas se encuentran entre las capas de entrada y salida. Normalmente, el número de capas ocultas varía de una a muchas. Es la capa de cálculo central que tiene las funciones que mapean la entrada a la salida de un nodo. Los nodos de las capas intermedias utilizan la función sigmoidea (logística), como sigue Hidden_Layer
